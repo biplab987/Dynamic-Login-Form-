@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+function loadForm(){
+   var formDiv = document.createElement("div");
+  var usernameLabel = document.createElement("label");
+  var passwordLabel = document.createElement("label");
+  var usernameInput = document.createElement("input");
+  var passwordInput = document.createElement("input");
+  var loginButton = document.createElement("button");
+
+  formDiv.className = "form-container";
+
+  // usernameLabel.innerHTML="Username";
+  usernameInput.type = "text";
+  usernameInput.id = "idUsername";
+  usernameInput.placeholder = "Username";
+  usernameInput.style.marginBottom = "10px";
+
+  // passwordLabel.innerHTML="Username";
+  passwordInput.type = "password";
+  passwordInput.id = "idPassword";
+  passwordInput.placeholder = "Password";
+  passwordInput.style.marginBottom = "10px";
+
+  loginButton.innerHTML = "Login";
+  loginButton.style.background = "rgb(41, 207, 80)";
+
+  formDiv.appendChild(usernameLabel);
+  formDiv.appendChild(usernameInput);
+  formDiv.appendChild(passwordLabel);
+  formDiv.appendChild(passwordInput);
+  formDiv.appendChild(loginButton);
+
+  var container = document.querySelector(".container");
+  container.style.height = "100vh";
+  container.style.width = "100vw";
+  container.style.display = "flex";
+  container.style.justifyContent = "center";
+  container.style.alignItems = "center";
+  container.appendChild(formDiv);
+  formDiv.style.display = "grid";
+  formDiv.style.justifyContent = "center";
+  formDiv.style.alignContent = "center";
+  formDiv.style.flexDirection = "column";
+  formDiv.style.height = "200px";
+  formDiv.style.width = "180px";
+  formDiv.style.border = "solid black 1px";
+  formDiv.style.borderRadius = "10px";
+  formDiv.style.background = "rgba(235, 120, 248, 0.1)";
+
+  document.getElementById("button").style.display = "none";
+}
+
+</script>
+
+</head>
+<body>
+<button id="button" onclick="loadForm()">Click to Load Form</button>
+<div class="container"></div>
+</body>
+</html>
